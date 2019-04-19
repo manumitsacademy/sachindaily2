@@ -11,6 +11,9 @@ import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ReportsHomeComponent } from './report/reports-home/reports-home.component';
 import { BillingModule } from './billing/billing.module';
 import { CustomerModule } from './customer/customer.module';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent
@@ -21,12 +24,13 @@ import { CustomerModule } from './customer/customer.module';
     SharedModule,
     BillingModule,
     HttpClientModule,
-    NgbModule,
+    NgbModule,MatMenuModule,
     RouterModule.forRoot([
     ]),
-    BrowserAnimationsModule,
+    BrowserAnimationsModule,MatButtonModule,
     MatTableModule,
-    CustomerModule
+    CustomerModule,
+    MatTabsModule
   ],
   providers: [CustomerModule],
   bootstrap: [AppComponent]
